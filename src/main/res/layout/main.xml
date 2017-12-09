@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:text="TextView"
+        android:textColor="#AAA" />
+    
+    <EditText
+        android:id="@+id/txtIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvMsg"
+        android:layout_centerVertical="true"
+        android:contentDescription="目标IP地址"
+        android:ems="10"
+        android:text="192.168.1.100" />
+
+    <EditText
+        android:id="@+id/txtPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtIP"
+        android:layout_below="@+id/txtIP"
+        android:ems="10"
+        android:text="20000" />
+    <SurfaceView
+		android:id="@+id/camera_preview"
+		android:layout_width="match_parent"
+		android:layout_height="500px"
+        android:layout_alignLeft="@+id/txtIP"
+        android:layout_below="@+id/txtPort"
+	>
+	</SurfaceView>
+   
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPort"
+        android:layout_below="@+id/camera_preview"
+        android:text="开始" />
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPort"
+        android:layout_below="@+id/btnSend"
+        android:text="结束" />
+
+</RelativeLayout>
